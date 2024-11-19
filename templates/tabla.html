@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tábla</title>
+</head>
+<body>
+
+    
+    <table>
+        
+        <tr>
+            <th>Név</th>
+            <th>Típus</th>
+            <th>Jellemzők</th>
+            {% if plants %}
+            {%for plants in plants%}
+            </tr>
+            <tr>
+                <td>{{ plants.name }}</td>
+                <td>{{ plants.type }}</td>
+                <td>{{ plants.feature }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            
+        </table>
+        <a href="/">Vissza a kezdőlapra</a>
+
+</body>
+</html>
